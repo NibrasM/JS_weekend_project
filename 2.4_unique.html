@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //not completed 
+        function unique(arr) {
+
+            let previous = arr[0];
+            let current = arr[1];
+            let next = arr[2];
+            let different=-1;
+
+            if (previous == current && current != next)
+                return next;
+            if (previous == next && previous != current)
+                return current;
+            if (current == next && previous != current)
+                return previous;
+
+
+            let i;
+
+            for (i = 3; i < arr.length; i++) {
+                previous=arr[i-1];
+                current=arr[i];
+
+                if (current != previous) {
+                    return arr[i];
+                }
+            }
+            return "All the elements are the same";
+        }
+
+      //  const arr = [1, 1, 1, 2, 1, 1];
+      const arr = [0, 0, 0, 0.55, 0, 0];
+
+        console.log(unique(arr));
+    </script>
+</body>
+
+</html>

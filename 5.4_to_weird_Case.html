@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function toWeirdCase(str) {
+
+            let new_str = "";
+            let current = '';
+
+            for (let i=0; i <str.length ; i++) {
+                current = str[i];
+                if (i % 2 == 0) {
+                    current = str[i].toUpperCase();
+                }
+
+                new_str += current;
+
+            }
+            return new_str;
+        }
+
+        console.log(toWeirdCase("Weird string case"));
+
+    </script>
+</body>
+
+</html>

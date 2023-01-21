@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function years_and_century(year) {
+            century = year / 100;
+            let rem = year % 100;
+            if (rem > 0) {
+                century = Math.floor(century) + 1;
+            }
+            else
+                century = Math.floor(century);
+
+            return century;
+        }
+
+        console.log(years_and_century(1901));
+    </script>
+</body>
+
+</html>

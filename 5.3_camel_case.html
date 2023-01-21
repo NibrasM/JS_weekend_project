@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+    function toCamelCase(str){
+        let i;
+        let new_str="";
+        let current_char='';
+        let captalized='';
+        for(i=0; i<str.length;i++ ){
+            current_char=str[i];
+
+            if(str[i]==="-" || str[i]==="_"){
+                captalized=str.slice(i,i+2).toUpperCase().replace("-",'').replace("_",'');
+                current_char=captalized;
+                i++;
+            }
+            else 
+            captalized='';
+            new_str+=current_char;
+        }
+        return new_str;
+    }
+    console.log(toCamelCase("the-stealth_warrior"));
+ </script>   
+</body>
+</html>
