@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
     <script>
-        function count_duplicates(str) {
+        function isogram(str) {
             //to have chars in array to make coount easier
             let str_arr = str.toLowerCase().split("");
             let count = {};
@@ -20,27 +18,18 @@
             });
 
             for ( i in count) {
-                if (count[i] === 1) {
-                    delete count[i];
+                if (count[i] > 1) {
+                    return false;
                 }
             }
 
        
-        return count;
+        return true;
         }
-
-        console.log(count_duplicates("aabbcde"));
-        console.log(count_duplicates("aaBbcde"));
-        console.log(count_duplicates("indivisibility"));
-        console.log(count_duplicates("Indivisibilities"));
-        console.log(count_duplicates("aA11"));
-        console.log(count_duplicates("ABBA"));
-
-
-
-
+        console.log(isogram("Dermatolyphics"));
+       console.log(isogram("aba"));
+       console.log(isogram("moOse"));
 
     </script>
 </body>
-
 </html>

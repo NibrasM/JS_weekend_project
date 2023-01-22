@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function longest(str1, str2){
+            const str3_arr= (str1+str2).split("").sort();
+            let str3_new = str3_arr.filter((letter,index) => str3_arr.indexOf(letter)===index).join("");
+            console.log(str3_new);
+        }
+
+        longest("xyaabbbcccccdefww", "xxxxxxyyyyyyabklmopq");
+        longest("abcdefghijklmnopqrstuvwxyz", "abcdefghijklmnopqrstuvwxyz");
+
+    </script>
+</body>
+</html>
